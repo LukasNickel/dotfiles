@@ -1,0 +1,38 @@
+[user]
+	name = Lukas Nickel
+	email = lukas.nickel@tu-dortmund.de
+[rebase]
+	stat = true
+[merge]
+	conflictstyle = diff3
+	tool = nvimdiff
+[core]
+    editor = nvim
+    excludesfile = /home/lukas/.gitignore_global
+[pull]
+	rebase = false
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[init]
+	defaultBranch = main
+
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    features = side-by-side line-numbers decorations
+    whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
