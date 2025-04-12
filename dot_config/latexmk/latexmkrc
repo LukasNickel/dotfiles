@@ -1,0 +1,5 @@
+$pdf_previewer = "xdg-open";
+$out_dir = "build";
+$pdflatex = "lualatex -interaction=nonstopmode --shell-escape -halt-on-error %O %S";
+$pdf_mode = 1;
+$clean_ext = "acr acn alg bcf bbl glg glo gls run.xml xdy snm nav fls log aux";
