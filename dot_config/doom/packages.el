@@ -24,3 +24,5 @@
 
 (package! snakemake-mode)
 (package! engrave-faces)
+
+(package! org-caldav)

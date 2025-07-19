@@ -30,3 +30,4 @@
 (load-file (expand-file-name "org-roam.el" doom-private-dir ))
 (load-file (expand-file-name "org-ref.el" doom-private-dir ))
 (load-file (expand-file-name "org-latex.el" doom-private-dir ))
+(load-file (expand-file-name "org-caldav.el" doom-private-dir ))

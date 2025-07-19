@@ -41,13 +41,18 @@
   (setq org-roam-capture-templates
         `(("s" "standard" plain "%?"
            :if-new
-           (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
+           (file+head "standard/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org"
                       "#+title: ${title}\n#+filetags: \n\n ")
+           :unnarrowed t)
+          ("c" "calendar" plain "%?"
+           :if-new
+           (file+head "calendar/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org"
+                      "#+title: ${title}\n#+filetags:calendar \n\n ")
            :unnarrowed t)
           ("d" "definition" plain
            "%?"
            :if-new
-           (file+head "${slug}.org" "#+title: ${title}\n#+filetags: definition \n\n* Definition\n\n\n* Examples\n")
+           (file+head "definitions/${slug}.org" "#+title: ${title}\n#+filetags: definition \n\n* Definition\n\n\n* Examples\n")
            :unnarrowed t)
           ("r" "ref" plain "%?"
            :if-new
@@ -64,7 +69,7 @@
            :jump-to-captured t)
           ("p" "presentation" plain "%?"
            :if-new
-           (file+head "${slug}.org"
+           (file+head "presentations/${slug}.org"
                       "#+title: ${title}
 #+filetags: presentation
 #+AUTHOR: Lukas Nickel
