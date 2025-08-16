@@ -3,8 +3,8 @@ _k_friendly_name=Activity Manager
 switch-to-activity-e39c5d3c-6391-4756-9703-40d93d9c5d3c=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
-Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,
-Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,
+Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,Switch to Last-Used Keyboard Layout
+Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 
 [kaccess]
@@ -155,7 +155,7 @@ Window Resize=none,,Resize Window
 Window Shade=none,,Shade Window
 Window Shrink Horizontal=none,,Shrink Window Horizontally
 Window Shrink Vertical=none,,Shrink Window Vertically
-Window to Desktop 1=none,,Window to Desktop 1
+Window to Desktop 1=Meta+!,,Window to Desktop 1
 Window to Desktop 10=none,,Window to Desktop 10
 Window to Desktop 11=none,,Window to Desktop 11
 Window to Desktop 12=none,,Window to Desktop 12
@@ -166,10 +166,10 @@ Window to Desktop 16=none,,Window to Desktop 16
 Window to Desktop 17=none,,Window to Desktop 17
 Window to Desktop 18=none,,Window to Desktop 18
 Window to Desktop 19=none,,Window to Desktop 19
-Window to Desktop 2=none,,Window to Desktop 2
+Window to Desktop 2=Meta+",,Window to Desktop 2
 Window to Desktop 20=none,,Window to Desktop 20
-Window to Desktop 3=none,,Window to Desktop 3
-Window to Desktop 4=none,,Window to Desktop 4
+Window to Desktop 3=Meta+§,,Window to Desktop 3
+Window to Desktop 4=Meta+$,,Window to Desktop 4
 Window to Desktop 5=none,,Window to Desktop 5
 Window to Desktop 6=none,,Window to Desktop 6
 Window to Desktop 7=none,,Window to Desktop 7
@@ -179,10 +179,10 @@ Window to Next Desktop=none,,Window to Next Desktop
 Window to Next Screen=none,Meta+Shift+Right,Move Window to Next Screen
 Window to Previous Desktop=none,,Window to Previous Desktop
 Window to Previous Screen=none,Meta+Shift+Left,Move Window to Previous Screen
-Window to Screen 0=,,Move Window to Screen 0
+Window to Screen 0=none,,Move Window to Screen 0
 Window to Screen 1=none,,Move Window to Screen 1
-Window to Screen 2=Meta+",,Move Window to Screen 2
-Window to Screen 3=Meta+§,,Move Window to Screen 3
+Window to Screen 2=none,,Move Window to Screen 2
+Window to Screen 3=none,,Move Window to Screen 3
 Window to Screen 4=none,,Move Window to Screen 4
 Window to Screen 5=none,,Move Window to Screen 5
 Window to Screen 6=none,,Move Window to Screen 6
@@ -251,6 +251,9 @@ switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=none,,Toggle do not disturb
 
+[services][kitty.desktop]
+_launch=Meta+Return
+
 [services][org.gnome.Ptyxis.desktop]
 new-window=none
 
@@ -258,7 +261,7 @@ new-window=none
 _launch=none
 
 [services][org.kde.konsole.desktop]
-_launch=Meta+Return
+_launch=none
 
 [services][org.kde.plasma-systemmonitor.desktop]
 _launch=none
