@@ -2,7 +2,7 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 (setq user-full-name "Lukas Nickel"
-      user-mail-address "{{ .email | quote }}")
+      user-mail-address {{ .email | quote }})
 
 (setq doom-font (font-spec :family "BerkeleyMono" :size 18)
       doom-variable-pitch-font (font-spec :family "BerkeleyMono" :size 18)
