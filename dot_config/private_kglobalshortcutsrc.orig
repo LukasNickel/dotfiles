@@ -220,12 +220,16 @@ Window to Previous Desktop=none,,Window to Previous Desktop
 Window to Previous Screen=none,Meta+Shift+Left,Move Window to Previous Screen
 Window to Screen 0=none,,Move Window to Screen 0
 Window to Screen 1=none,,Move Window to Screen 1
+<<<<<<< HEAD
 Window to Screen 2=none,,Move Window to Screen 2
 Window to Screen 3=none,,Move Window to Screen 3
+||||||| da9ebe7
 Window to Screen 2=Meta+",,Move Window to Screen 2
 Window to Screen 3=Meta+§,,Move Window to Screen 3
+=======
 Window to Screen 2=none,,Move Window to Screen 2
 Window to Screen 3=Meta+§,,Move Window to Screen 3
+>>>>>>> 0e7e19b6df059c86876e36f2b6ace7611eefa711
 Window to Screen 4=none,,Move Window to Screen 4
 Window to Screen 5=none,,Move Window to Screen 5
 Window to Screen 6=none,,Move Window to Screen 6

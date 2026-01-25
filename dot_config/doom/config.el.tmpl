@@ -2,7 +2,7 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 (setq user-full-name "Lukas Nickel"
-      user-mail-address "lukasnickel@outlook.de")
+      user-mail-address {{ .email | quote }})
 
 (setq doom-font (font-spec :family "BerkeleyMono" :size 18)
       doom-variable-pitch-font (font-spec :family "BerkeleyMono" :size 18)
@@ -18,7 +18,7 @@
 (setq org-directory "~/org"
       org-roam-directory "~/org"
       org-agenda-files (directory-files-recursively "~/org/" "\\.org$")
-      org-roam-db-location "~/org/org-roam.db"
+      org-roam-db-location "~/org-roam.db"
       )
 
 (use-package! org-modern-indent
