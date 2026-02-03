@@ -14,9 +14,8 @@
   )
 (setq org-latex-src-block-backend 'engraved)
 
-(add-to-list 'exec-path "/home/lukas/.local/texlive/2024/bin/x86_64-linux")
 (setq org-latex-compiler "lualatex")
-(setq org-latex-pdf-process (list "latexmk -f %f -output-directory=%o"))
+(setq org-latex-pdf-process (list "toolbox -c latex run latexmk -f %f -output-directory=%o"))
 
 (defun org-export-output-file-name-modified (orig-fun extension &optional subtreep pub-dir)
   (unless pub-dir
