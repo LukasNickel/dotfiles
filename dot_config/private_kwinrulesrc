@@ -1,0 +1,21 @@
+[0c41c14c-67b4-40af-8f43-37b2dc948ccc]
+Description=Prevent border disappearing
+maximizehorizrule=2
+maximizevertrule=2
+types=1
+
+[1cff826e-2376-4cc0-a4a7-16101b4ec675]
+Description=Min Geom size
+minsizerule=2
+types=1
+
+[General]
+count=3
+rules=df06840c-35d7-4636-afdc-fbe37a03c598,0c41c14c-67b4-40af-8f43-37b2dc948ccc,1cff826e-2376-4cc0-a4a7-16101b4ec675
+
+[df06840c-35d7-4636-afdc-fbe37a03c598]
+Description=Everything transparent
+Enabled=false
+opacityactiverule=2
+opacityinactiverule=2
+wmclasscomplete=true
