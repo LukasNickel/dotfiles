@@ -15,7 +15,7 @@
        :desc "tag (roam)"           "t"   #'org-roam-tag-add
        :desc "tag (org)"            "T"   #'org-set-tags-command
        :desc "rebuid db"            "d"   #'org-roam-db-build-cache
-       :desc "cite"                 "c"   #'org-ref-insert-cite-link
+       :desc "cite"                 "c"   #'org-cite-insert
        )
       )
 
@@ -53,6 +53,11 @@
            :if-new
            (file+head "standard/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org"
                       "#+title: ${title}\n#+filetags: \n\n ")
+           :unnarrowed t)
+          ("p" "python-tooling" plain "%?"
+           :if-new
+           (file+head "standard/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org"
+                      "#+title: ${title}\n#+filetags:python \n\n ")
            :unnarrowed t)
           ("e" "emacs" plain "%?"
            :if-new
