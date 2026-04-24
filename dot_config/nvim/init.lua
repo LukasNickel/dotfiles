@@ -46,8 +46,6 @@ require('packer').startup(function(use)
 
   use 'nvim-lualine/lualine.nvim'
 
-  use 'lukas-reineke/indent-blankline.nvim'
-
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
 
   use 'tpope/vim-sleuth'
@@ -129,11 +127,6 @@ require('lualine').setup {
 }
 
 require('Comment').setup()
-
-require('indent_blankline').setup {
-  char = '┊',
-  show_trailing_blankline_indent = false,
-}
 
 require('gitsigns').setup {
   signs = {
@@ -219,7 +212,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
-require('nvim-treesitter.configs').setup {
+require('nvim-treesitter.config').setup {
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = { 'c', 'cpp', 'lua', 'python', 'typescript', 'help', 'vim', 'latex', 'bibtex', 'bash' },
 
@@ -350,12 +343,3 @@ mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
 }
 
-mason_lspconfig.setup_handlers {
-  function(server_name)
-    require('lspconfig')[server_name].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = servers[server_name],
-    }
-  end,
-}
