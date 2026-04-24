@@ -27,6 +27,20 @@
 (with-eval-after-load 'org (global-org-modern-mode))
 
 
+(use-package! org-special-block-extras
+  :ensure t
+  :hook (org-mode . org-special-block-extras-mode)
+  :custom
+  ;; The places where I keep my ‘#+documentation’
+  (setq org-docs-libraries
+        '("~/org/standard/2026/20260324125257-org_special_blocks_extra_glossary.org"))
+  ;; For the “doc:𝒳” link type
+    ;;;; Nearly instantaneous display of tooltips.
+  (setq tooltip-delay 0)
+    ;;;;; Give user 30 seconds before tooltip automatically disappears.
+  (setq tooltip-hide-delay 300)
+  )
+
 (load-file (expand-file-name "org_roam.el" doom-private-dir ))
 (load-file (expand-file-name "citar.el" doom-private-dir ))
 (load-file (expand-file-name "org-latex.el" doom-private-dir ))
