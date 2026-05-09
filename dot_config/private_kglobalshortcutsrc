@@ -54,7 +54,7 @@ Kill Window=Meta+Shift+Q,Meta+Ctrl+Esc,Kill Window
 KrohnkiteBTreeLayout=none,none,Krohnkite: BTree Layout
 KrohnkiteColumnsLayout=none,none,Krohnkite: Columns Layout
 KrohnkiteDecrease=none,none,Krohnkite: Decrease
-KrohnkiteFloatAll=Meta+Shift+F,none,Krohnkite: Toggle Float All
+KrohnkiteFloatAll=Meta+Shift+C,none,Krohnkite: Toggle Float All
 KrohnkiteFloatingLayout=none,none,Krohnkite: Floating Layout
 KrohnkiteFocusDown=Meta+J,none,Krohnkite: Focus Down
 KrohnkiteFocusLeft=Meta+H,none,Krohnkite: Focus Left
@@ -312,9 +312,6 @@ toggle do not disturb=none,none,Toggle do not disturb
 
 [services][dev.getaurora.aurora-docs.desktop]
 _launch=none
-
-[services][kitty.desktop]
-_launch=Meta+Return
 
 [services][org.gnome.Ptyxis.desktop]
 new-window=none
