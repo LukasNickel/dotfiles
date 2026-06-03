@@ -45,3 +45,11 @@
 (load-file (expand-file-name "citar.el" doom-private-dir ))
 (load-file (expand-file-name "org-latex.el" doom-private-dir ))
 (load-file (expand-file-name "org-caldav.el" doom-private-dir ))
+
+{{- if eq .emacs_location "distrobox" }}
+# this will only be included in ~/.bashrc on work-laptop
+(load-file (expand-file-name "azure.el" doom-private-dir ))
+(setq browse-url-browser-function #'browse-url-generic)
+(setq browse-url-generic-program "host-xdg-open")
+(setq org-display-remote-inline-images 'cache)
+{{- end }}
