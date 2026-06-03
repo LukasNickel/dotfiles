@@ -27,3 +27,4 @@
 (package! engrave-faces)
 
 (package! org-caldav)
+(package! request)
