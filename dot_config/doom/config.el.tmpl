@@ -1,6 +1,11 @@
 ;; -*- no-byte-compile: t; -*-
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
+
+; workaround for some org rendering issues lately
+(use-package! org)
+(setq org-fold-core--optimize-for-huge-buffers nil)
+
 (setq user-full-name "Lukas Nickel"
       user-mail-address {{ .email | quote }})
 
