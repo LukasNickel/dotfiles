@@ -24,12 +24,13 @@ MoveResize=90
 Active=true
 
 [Plugins]
-FullOpacityFSEnabled=true
-blurEnabled=true
+FullOpacityFSEnabled=false
+blurEnabled=false
 contrastEnabled=false
-desktopchangeosdEnabled=true
+desktopchangeosdEnabled=false
 dialogparentEnabled=false
 fadingpopupsEnabled=false
+frozenappEnabled=false
 fullscreenEnabled=false
 glideEnabled=true
 hidecursorEnabled=true
@@ -43,6 +44,7 @@ screenedgeEnabled=false
 slidingpopupsEnabled=false
 squashEnabled=false
 videowallEnabled=false
+virtualdesktopsonlyonprimaryEnabled=false
 windowapertureEnabled=false
 zoomEnabled=false
 
@@ -51,6 +53,10 @@ PopupHideDelay=200
 
 [Script-krohnkite]
 dockOrderRight=2
+floatingClass=AzureDashboard
+floatingTitle=AzureDashboard
+ignoreClass=krunner,yakuake,spectacle,kded5,xwaylandvideobridge,plasmashell,ksplashqml,org.kde.plasmashell,org.kde.polkit-kde-authentication-agent-1,org.kde.kruler,kruler,kwin_wayland,ksmserver-logout-greeter, AzureDashboard
+ignoreTitle=AzureDashboard
 screenGapBetween=10
 screenGapBottom=10
 screenGapLeft=10
@@ -182,13 +188,12 @@ VirtualKeyboardEnabled=true
 
 [Windows]
 ActiveMouseScreen=false
-BorderSnapZone=20
-CenterSnapZone=20
+BorderSnapZone=0
 DelayFocusInterval=0
 FocusPolicy=FocusFollowsMouse
 RollOverDesktops=true
 SeparateScreenFocus=true
-WindowSnapZone=20
+WindowSnapZone=0
 
 [Xwayland]
 Scale=1.5
