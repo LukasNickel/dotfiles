@@ -134,25 +134,24 @@ ForegroundVisited=155,89,182
 
 [General]
 AccentColor=0,0,0,0
-ColorSchemeHash=2c3f86428c11011a7c64ee1e7f47c274d498ff10
+ColorSchemeHash=9d38eb71ded8ff549da26d57d7cbab9164da243a
 LastUsedCustomAccentColor=232,203,45
 TerminalApplication=konsole
 TerminalService=org.kde.konsole.desktop
 XftAntialias=true
 XftHintStyle=hintslight
-XftSubPixel=rgb
+XftSubPixel=none
 fixed=Berkeley Mono Variable,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-font=Berkeley Mono Variable,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-menuFont=Berkeley Mono Variable,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-smallestReadableFont=Berkeley Mono Variable,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-toolBarFont=Berkeley Mono Variable,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-
-[Icons]
-Theme=Gruvbox
+font=Berkeley Mono Variable,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+menuFont=Berkeley Mono Variable,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+smallestReadableFont=Berkeley Mono Variable,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+toolBarFont=Berkeley Mono Variable,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 
 [KDE]
 AnimationDurationFactor=0
 LookAndFeelPackage=org.kde.breezedark.desktop
+contrast=4
+frameContrast=0.2
 
 [KFileDialog Settings]
 Allow Expansion=false
@@ -163,8 +162,8 @@ Show Full Path=false
 Show Inline Previews=true
 Show Preview=false
 Show Speedbar=true
-Show hidden files=true
-Sort by=Name
+Show hidden files=false
+Sort by=Date
 Sort directories first=true
 Sort hidden files last=false
 Sort reversed=false
@@ -177,7 +176,7 @@ Dialog Size=601,481
 [WM]
 activeBackground=39,44,49
 activeBlend=252,252,252
-activeFont=Berkeley Mono Variable,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+activeFont=Berkeley Mono Variable,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 activeForeground=252,252,252
 inactiveBackground=32,36,40
 inactiveBlend=161,169,177
