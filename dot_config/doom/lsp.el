@@ -2,12 +2,12 @@
 (setq m/pyright-uvx-command
       '("uvx" "--from" "pyright==1.1.403" "pyright-langserver" "--" "--stdio"))
 
-; Weirdly segfaults although that shouldn't happen on emacs 30...
-;(use-package eglot
-;  :init
-;  (add-hook 'python-mode-hook 'eglot-ensure)
-;  :config
-;  (add-to-list 'eglot-server-programs `(python-mode . ,m/pyright-uvx-command)))
+                                        ; Weirdly segfaults although that shouldn't happen on emacs 30...
+                                        ;(use-package eglot
+                                        ;  :init
+                                        ;  (add-hook 'python-mode-hook 'eglot-ensure)
+                                        ;  :config
+                                        ;  (add-to-list 'eglot-server-programs `(python-mode . ,m/pyright-uvx-command)))
 
 (use-package treesit-auto
   :custom
@@ -17,7 +17,7 @@
   (global-treesit-auto-mode))
 
 ;; typst
-;(require 'lsp-mode)
+                                        ;(require 'lsp-mode)
 (use-package typst-preview
   :load-path "directory-of-typst-preview.el"
   :config
@@ -42,3 +42,7 @@
                    ,(eglot-alternatives `(,typst-ts-lsp-download-path
                                           "tinymist"
                                           "typst-lsp"))))))
+
+(with-eval-after-load 'eglot
+  (use-package just-ts-mode
+    ))

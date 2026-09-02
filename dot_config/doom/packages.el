@@ -28,3 +28,6 @@
 
 (package! org-caldav)
 (package! request)
+
+(package! just-ts-mode)
+(package! obsidian)
