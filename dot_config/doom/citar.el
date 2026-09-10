@@ -1,9 +1,9 @@
-;;; ../../../../var/home/lnickel/.config/doom/citar.el -*- lexical-binding: t; -*-
+
 
 (use-package! citar
   :no-require
   :custom
-  (org-cite-global-bibliography '("/home/lnickel/org/references/zotero_export.bib"))
+  (org-cite-global-bibliography '("/home/lnickel/zotero_export.bib"))
   (org-cite-insert-processor 'citar)
   (org-cite-follow-processor 'citar)
   (org-cite-activate-processor 'citar)

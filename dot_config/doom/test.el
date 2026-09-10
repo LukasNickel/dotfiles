@@ -2,14 +2,20 @@
 ;;;
                                         ; custom ocr import by chatgpt
                                         ; 
-(setq handwritten-ocr-python-script
-      "~/Downloads/ocrtest/handwritten-ocr.py")
+                                        ;(setq handwritten-ocr-python-script
+                                        ;      "~/Downloads/ocrtest/handwritten-ocr.py")
                                         ;(add-to-list 'load-path doom-private-dir)
                                         ;(require 'handwritten-ocr-import)
-(load! (expand-file-name "handwritten-ocr-import.el" doom-private-dir ))
+                                        ;(load! (expand-file-name "handwritten-ocr-import.el" doom-private-dir ))
                                         ;(global-set-key (kbd "C-c n o") #'handwritten-ocr-import)
-(setq handwritten-ocr-auth-sources '(default)) ; make sure we actually use kwallet etc
-(setq handwritten-ocr-auth-user nil) ; i saved the api key with no user?
+                                        ;(setq handwritten-ocr-auth-sources '(default)) ; make sure we actually use kwallet etc
+                                        ;(setq handwritten-ocr-auth-user nil) ; i saved the api key with no user?
+                                        ;
+(use-package! org-ocr-import)
+
+(setq org-ocr-import-auth-sources '(default)) ; make sure we actually use kwallet etc
+(setq org-ocr-import-auth-user nil) ; i saved the api key with no user?
+
 
 (load-file (expand-file-name "org-attach-migrate.el" doom-private-dir ))
                                         ; obsidian
@@ -19,7 +25,7 @@
   (obsidian-backlinks-mode t)
   :custom
   ;; location of obsidian vault
-  (obsidian-directory "~/repos/arch-implantiq")
+  (obsidian-directory "~/repo/arch-implantiq")
   ;; Default location for new notes from `obsidian-capture'
   (obsidian-inbox-directory "Inbox")
   ;; Useful if you're going to be using wiki links
@@ -37,3 +43,13 @@
               ("C-c C-p" . obsidian-jump)
               ;; Follow a backlink for the current file
               ("C-c C-b" . obsidian-backlink-jump)))
+
+
+
+
+                                        ; agent shell
+(require 'acp)
+(require 'agent-shell)
+(setq agent-shell-openai-authentication
+      (agent-shell-openai-make-authentication :login t))
+;; rest of config...

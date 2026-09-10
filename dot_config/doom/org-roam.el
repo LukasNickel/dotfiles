@@ -52,17 +52,16 @@
            (file+head "standard/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org"
                       "#+title: ${title}\n#+filetags: \n\n ")
            :unnarrowed t)
-          ("p" "python-tooling" plain "%?"
-           :if-new
-           (file+head "standard/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org"
-                      "#+title: ${title}\n#+filetags:python \n\n ")
-           :unnarrowed t)
           ("e" "emacs" plain "%?"
            :if-new
            (file+head "standard/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org"
                       "#+title: ${title}\n#+filetags: :emacs:software: \n\n ")
            :unnarrowed t)
-
+          ("a" "agent" plain "%?"
+           :if-new
+           (file+head "agent/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org"
+                      "#+title: ${title}\n#+filetags: :agent: \n\n ")
+           :unnarrowed t)
           ("n" "literature note" plain
            "%?"
            :target
@@ -70,26 +69,7 @@
             "%(expand-file-name (or citar-org-roam-subdir \"\") org-roam-directory)/${citar-citekey}.org"
             "#+title: ${citar-citekey} (${citar-date}). ${note-title}.\n#+created: %U\n#+last_modified: %U\n\n")
            :unnarrowed t)
-          ("p" "presentation" plain "%?"
-           :if-new
-           (file+head
-            "presentations/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org"
-            "#+title: ${title}
-#+filetags: presentation
-#+BEAMER_THEME: metropolis
-#+EXPORT_FILE_NAME: ~/Desktop/build/${title}.pdf
-#+AUTHOR: Lukas Nickel
-#+OPTIONS: H:1 toc:nil num:t
-#+LATEX_CLASS: beamer
-#+LATEX_CLASS_OPTIONS: [presentation, 10pt]
-#+LATEX_HEADER: \\usepackage{amsmath}
-#+LATEX_HEADER: \\usepackage{amssymb}
-#+LATEX_HEADER: \\usepackage{mathtools}
-#+LATEX_HEADER: \\usepackage{csquotes}
-#+LATEX_HEADER: \\usepackage{unicode-math}"
-            )
-           :unnarrowed t)
-          ("a" "ianus presentation" plain "%?"
+          ("i" "ianus presentation" plain "%?"
            :if-new
            (file+head
             "ianus_presentations/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org"
@@ -118,7 +98,7 @@
 (use-package! org-ref)
 (after! org-ref
   (setopt
-   bibtex-completion-bibliography '("/home/lnickel/Documents/zotero.bib")
+   bibtex-completion-bibliography '("/home/lnickel/zotero_export.bib")
    bibtex-completion-pdf-field "file"
    bibtex-completion-notes-template-multiple-files
    (concat

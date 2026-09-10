@@ -10,8 +10,6 @@
 (package! org-modern)
 (package! org-special-block-extras)
 (package! org-appear)
-(package! org-glossary
-  :recipe (:host github :repo "tecosaur/org-glossary"))
 (package! org-modern-indent
   :recipe (:host github :repo "jdtsmith/org-modern-indent"))
 
@@ -26,8 +24,17 @@
 (package! snakemake-mode)
 (package! engrave-faces)
 
-(package! org-caldav)
 (package! request)
 
 (package! just-ts-mode)
 (package! obsidian)
+
+(package! org-ocr-import
+  :recipe (:host github
+           :repo "LukasNickel/org-ocr-import"
+           :files ("org-ocr-import.el"
+                   "handwritten-ocr.py")))
+
+(package! shell-maker)
+(package! acp)
+(package! agent-shell)
