@@ -1,0 +1,44 @@
+#+title: ${title}
+#+filetags: :project:
+#+startup: overview
+#+options: toc:nil num:nil
+
+* Quick access
+Links I use frequently or want immediately available when opening this project.
+
+| Resource | Purpose |
+|----------+---------|
+|          |         |
+
+* Development and Infrastructure
+Development infrastructure, repositories, CI/CD and related tooling.
+
+| Resource | Purpose | Notes |
+|----------+---------+-------|
+|          |         |       |
+
+* Data
+Storage, datasets, annotation systems and other data-related resources.
+
+| Resource | Purpose | Notes |
+|----------+---------+-------|
+|          |         |       |
+
+* Management
+Project documentation and external references.
+
+| Resource | Purpose | Notes |
+|----------+---------+-------|
+|          |         |       |
+
+* Occasional / obscure
+Resources that are rarely needed and therefore particularly easy to forget.
+
+| Resource | When do I need this? | Notes |
+|----------+----------------------+-------|
+|          |                      |       |
+
+* Visual bookmarks
+
+Screenshots or other visual references for resources that are easier to recognize visually.
+

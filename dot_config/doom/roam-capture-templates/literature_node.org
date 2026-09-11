@@ -1,0 +1,7 @@
+#+#+title: ${citar-citekey}(${citar-date}).${note-title}.
+#+created: %U
+#+last_modified: %U
+
+
+
+

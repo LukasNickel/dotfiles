@@ -33,6 +33,9 @@
   (setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
   (org-roam-db-autosync-enable))
 
+(defvar my-org-roam-template-directory
+  (expand-file-name "roam-capture-templates/" doom-user-dir))
+
 ;; TODO: The templates could go in extra files
 (after! org-roam
   (setq org-beamer-header "#+title: ${title}
@@ -47,47 +50,35 @@
 #+LATEX_HEADER: \\usepackage{csquotes}
 #+LATEX_HEADER: \\usepackage{unicode-math}")
   (setq org-roam-capture-templates
-        `(("s" "standard" plain "%?"
-           :if-new
-           (file+head "standard/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org"
-                      "#+title: ${title}\n#+filetags: \n\n ")
+        `(("s" "standard" plain 
+           (file ,(expand-file-name "standard.org" my-org-roam-template-directory))
+           :target
+           (file "standard/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org")
            :unnarrowed t)
-          ("e" "emacs" plain "%?"
-           :if-new
-           (file+head "standard/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org"
-                      "#+title: ${title}\n#+filetags: :emacs:software: \n\n ")
+          ("e" "emacs" plain
+           (file ,(expand-file-name "emacs.org" my-org-roam-template-directory))
+           :target
+           (file "standard/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org")
            :unnarrowed t)
-          ("a" "agent" plain "%?"
-           :if-new
-           (file+head "agent/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org"
-                      "#+title: ${title}\n#+filetags: :agent: \n\n ")
+          ("a" "agent" plain
+           (file ,(expand-file-name "agent.org" my-org-roam-template-directory))
+           :target
+           (file "agent/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org")
+           :unnarrowed t)
+          ("d" "project-dashboard" plain
+           (file ,(expand-file-name "project_dashboard.org" my-org-roam-template-directory))
+           :target
+           (file "projects/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org")
            :unnarrowed t)
           ("n" "literature note" plain
-           "%?"
+           (file ,(expand-file-name "literature_node.org" my-org-roam-template-directory))
            :target
-           (file+head
-            "%(expand-file-name (or citar-org-roam-subdir \"\") org-roam-directory)/${citar-citekey}.org"
-            "#+title: ${citar-citekey} (${citar-date}). ${note-title}.\n#+created: %U\n#+last_modified: %U\n\n")
+           (file "%(expand-file-name (or citar-org-roam-subdir \"\") org-roam-directory)/${citar-citekey}.org")
            :unnarrowed t)
-          ("i" "ianus presentation" plain "%?"
-           :if-new
-           (file+head
-            "ianus_presentations/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org"
-            "#+title: ${title}
-#+filetags: presentation
-#+AUTHOR: Lukas Nickel
-#+OPTIONS: H:1 toc:nil num:t
-#+LATEX_HEADER: \\usepackage[german]{datetime2}
-#+BEAMER_THEME: ianusbeamer
-#+EXPORT_FILE_NAME: ~/Desktop/build/${title}.pdf
-#+LATEX_CLASS: beamer
-#+LATEX_CLASS_OPTIONS: [presentation, 10pt]
-#+LATEX_HEADER: \\usepackage{amsmath}
-#+LATEX_HEADER: \\usepackage{amssymb}
-#+LATEX_HEADER: \\usepackage{mathtools}
-#+LATEX_HEADER: \\usepackage{csquotes}
-#+LATEX_HEADER: \\usepackage{unicode-math}"
-            )
+          ("i" "ianus presentation" plain 
+           (file ,(expand-file-name "ianus_presentation.org" my-org-roam-template-directory))
+           :target
+           (file "ianus_presentations/%<%Y>/%<%Y%m%d%H%M%S>-${slug}.org")
            :unnarrowed t)
           )))
 
@@ -115,7 +106,6 @@
     ":DOI: ${doi}\n"
     ":URL: ${url}\n"
     ":END:\n\nSee [[cite:&${=key=}]]\n")))
-
 
                                         ; roam ui
 (use-package! websocket

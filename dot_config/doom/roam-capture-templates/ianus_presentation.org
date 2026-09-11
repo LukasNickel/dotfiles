@@ -1,0 +1,17 @@
+#+title: ${title}
+#+filetags: presentation
+#+AUTHOR: Lukas Nickel
+#+OPTIONS: H:1 toc:nil num:t
+#+LATEX_HEADER: \\usepackage[german]{datetime2}
+#+BEAMER_THEME: ianusbeamer
+#+EXPORT_FILE_NAME: ~/Desktop/build/${title}.pdf
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation, 10pt]
+#+LATEX_HEADER: \\usepackage{amsmath}
+#+LATEX_HEADER: \\usepackage{amssymb}
+#+LATEX_HEADER: \\usepackage{mathtools}
+#+LATEX_HEADER: \\usepackage{csquotes}
+#+LATEX_HEADER: \\usepackage{unicode-math}"
+
+
+
